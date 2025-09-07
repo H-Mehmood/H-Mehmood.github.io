@@ -1,0 +1,428 @@
+
+:root {
+    --primary-color: #4a90e2; /* A vibrant blue */
+    --secondary-color: #6a737d; /* A soft gray */
+    --light-bg: #f0f2f5; /* Very light gray */
+    --dark-text: #2c3e50; /* Dark blue-gray for text */
+    --card-bg: #ffffff; /* White for cards */
+    --border-color: #e0e0e0; /* Light border for separation */
+    --shadow-color: rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.7;
+}
+
+/* General Section Styling */
+section {
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+}
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 6px;
+    background-color: var(--primary-color);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 15px var(--shadow-color);
+    padding: 1rem 0;
+}
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--dark-text) !important;
+}
+.nav-link {
+    color: var(--secondary-color) !important;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    visibility: visible;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #e0f2f7 0%, #cce7f5 100%); /* Light, airy gradient */
+    color: var(--dark-text);
+    padding: 150px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* For potential background animations */
+}
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--dark-text);
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.hero-subtitle {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+.hero-description {
+    font-size: 1.3rem;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    line-height: 1.8;
+    color: var(--secondary-color);
+}
+.profile-image-hero {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--primary-color);
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.4);
+    margin-bottom: 40px;
+    animation: pulse 2s infinite alternate; /* Subtle animation */
+}
+@keyframes pulse {
+    from { transform: scale(1); box-shadow: 0 0 30px rgba(74, 144, 226, 0.4); }
+    to { transform: scale(1.02); box-shadow: 0 0 40px rgba(74, 144, 226, 0.6); }
+}
+.social-icons-hero a {
+    color: var(--dark-text);
+    font-size: 2.2rem;
+    margin: 0 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons-hero a:hover {
+    color: var(--primary-color);
+    transform: translateY(-8px);
+}
+.btn-main-action {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    padding: 18px 45px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+}
+.btn-main-action:hover {
+    background-color: #3a7bd5;
+    border-color: #3a7bd5;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(74, 144, 226, 0.5);
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--card-bg);
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+.about-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: var(--dark-text);
+}
+.about-highlight {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.education-item {
+    background-color: var(--light-bg);
+    border-left: 6px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.education-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.education-item h5 {
+    color: var(--dark-text);
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+.education-item p {
+    color: var(--secondary-color);
+    margin-bottom: 0;
+    font-size: 1.05rem;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: var(--light-bg);
+}
+.skill-category-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 50px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 15px;
+    text-align: center;
+}
+.skill-item {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 20px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensure equal height */
+}
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+.skill-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.skill-item span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    background-color: var(--card-bg);
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+.portfolio-card {
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.portfolio-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+.portfolio-card .card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+.portfolio-card .card-body {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.portfolio-card .card-title {
+    color: var(--dark-text);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.portfolio-card .card-text {
+    color: var(--secondary-color);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+.portfolio-card .btn-group {
+    margin-top: auto;
+}
+.portfolio-card .btn {
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 12px 25px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.portfolio-card .btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.portfolio-card .btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--light-bg);
+}
+.contact-info-item {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 35px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 20px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-info-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.contact-info-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-right: 25px;
+}
+.contact-info-item p {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    color: var(--dark-text);
+}
+.contact-info-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.contact-info-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-text);
+    color: var(--light-bg);
+    padding: 50px 0;
+    font-size: 0.95rem;
+}
+.footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .skill-category-title {
+        font-size: 2rem;
+    }
+    .skill-item i {
+        font-size: 2.5rem;
+    }
+    .skill-item span {
+        font-size: 1.2rem;
+    }
+    .portfolio-card .card-title {
+        font-size: 1.6rem;
+    }
+    .portfolio-card .card-img-top {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0;
+    }
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    .hero-description {
+        font-size: 1rem;
+    }
+    .profile-image-hero {
+        width: 180px;
+        height: 180px;
+    }
+    .social-icons-hero a {
+        font-size: 1.8rem;
+        margin: 0 15px;
+    }
+    .btn-main-action {
+        padding: 15px 35px;
+        font-size: 1.1rem;
+    }
+    section {
+        padding: 70px 0;
+    }
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 50px;
+    }
+    .skill-category-title {
+        font-size: 1.8rem;
+    }
+    .skill-item {
+        padding: 25px;
+    }
+    .skill-item i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .skill-item span {
+        font-size: 1.1rem;
+    }
+    .portfolio-card .card-img-top {
+        height: 180px;
+    }
+    .portfolio-card .card-title {
+        font-size: 1.4rem;
+    }
+    .portfolio-card .card-text {
+        font-size: 0.95rem;
+    }
+    .contact-info-item {
+        padding: 25px;
+    }
+    .contact-info-item i {
+        font-size: 2rem;
+        margin-right: 20px;
+    }
+    .contact-info-item p {
+        font-size: 1.1rem;
+    }
+}
